@@ -1,6 +1,7 @@
 package com.spike.mdocmocklibrary.parse
 
 import co.nstant.`in`.cbor.CborDecoder
+import co.nstant.`in`.cbor.model.Array
 import co.nstant.`in`.cbor.model.DataItem
 import co.nstant.`in`.cbor.model.MajorType
 import com.google.gson.Gson
@@ -40,12 +41,14 @@ class CborUtils {
                     when (value.majorType) {
                         MajorType.UNICODE_STRING -> put(identifier, value.toString())
                         MajorType.ARRAY -> {
-                            val dpJsonObject = buildJsonObject {
-                                val drivingPrivileges = value.get(0)
-                                put("issue_date", drivingPrivileges["issue_date"].toString())
-                                put("expiry_date", drivingPrivileges["expiry_date"].toString())
-                                put("vehicle_category_code", drivingPrivileges["vehicle_category_code"].toString())
+                            var dpJsonObject = buildJsonObject {  }
+                            (value as Array).dataItems.forEach {drivingPrivileges ->
+                                dpJsonObject = buildJsonObject {
+                                    put("issue_date", drivingPrivileges["issue_date"].toString())
+                                    put("expiry_date", drivingPrivileges["expiry_date"].toString())
+                                    put("vehicle_category_code", drivingPrivileges["vehicle_category_code"].toString())
 
+                                }
                             }
                             putJsonArray(identifier) {
                                 add(dpJsonObject)
@@ -66,11 +69,8 @@ class CborUtils {
             val jsonString = gson.toJson(vcJsonObject)
             System.out.println("Json String-->: $jsonString")
 
-           // val jsonString = vcJsonObject.toString()
+            // val jsonString = vcJsonObject.toString()
             System.out.println("Json Object-->: ${vcJsonObject.toString()}")
-
-            System.out.println("Json Object-driving-Vehicle category code->: ${vcJsonObject.drivingPrivileges.get(0).vehicleCategoryCode}")
-            System.out.println("Json Object-expiry-->: ${vcJsonObject.drivingPrivileges.get(0).expiryDateDP}")
 
             return jsonObjectResult
         }
