@@ -5,8 +5,7 @@ import co.nstant.`in`.cbor.model.Array
 import co.nstant.`in`.cbor.model.DataItem
 import co.nstant.`in`.cbor.model.MajorType
 import com.google.gson.Gson
-import com.spike.mdocmocklibrary.mock.ParsedVcResponse
-import kotlinx.serialization.decodeFromString
+import com.spike.mdocmocklibrary.mock.MDLVCResponse
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.buildJsonObject
@@ -24,46 +23,58 @@ class CborUtils {
 
 
         fun parseCborToGetJsonResponse(cborBytes: ByteArray): JsonObject {
-            val jsonObjectResult = buildJsonObject {
+
+            val mDocVcJsonObject = buildJsonObject {
 
                 val cbors = CborDecoder(ByteArrayInputStream(cborBytes)).decode()
+
+                val validityInfoJsonObject = parseIssuerAuth(cbors)
+
+                put("validityInfo", validityInfoJsonObject)
 
                 val elements =
                     cbors[0]["issuerSigned"]["nameSpaces"]["org.iso.18013.5.1"] as CborArray
 
-                for (item in elements.dataItems) {
-                    val decoded =
-                        CborDecoder(ByteArrayInputStream((item as CborByteString).bytes)).decode()
+                val credentialSubjectJsonObject = buildJsonObject {
+                    for (item in elements.dataItems) {
+                        val decoded =
+                            CborDecoder(ByteArrayInputStream((item as CborByteString).bytes)).decode()
 
-                    val identifier = decoded[0]["elementIdentifier"].toString()
-                    val value = decoded[0]["elementValue"]
+                        val identifier = decoded[0]["elementIdentifier"].toString()
+                        val value = decoded[0]["elementValue"]
 
-                    when (value.majorType) {
-                        MajorType.UNICODE_STRING -> put(identifier, value.toString())
-                        MajorType.ARRAY -> {
-                            var dpJsonObject = buildJsonObject {  }
-                            (value as Array).dataItems.forEach {drivingPrivileges ->
-                                dpJsonObject = buildJsonObject {
-                                    put("issue_date", drivingPrivileges["issue_date"].toString())
-                                    put("expiry_date", drivingPrivileges["expiry_date"].toString())
-                                    put("vehicle_category_code", drivingPrivileges["vehicle_category_code"].toString())
+                        when (value.majorType) {
+                            MajorType.UNICODE_STRING -> put(identifier, value.toString())
+                            MajorType.ARRAY -> {
+                                var dpJsonObject = buildJsonObject {  }
+                                (value as Array).dataItems.forEach {drivingPrivileges ->
+                                    dpJsonObject = buildJsonObject {
+                                        put("issue_date", drivingPrivileges["issue_date"].toString())
+                                        put("expiry_date", drivingPrivileges["expiry_date"].toString())
+                                        put("vehicle_category_code", drivingPrivileges["vehicle_category_code"].toString())
 
+                                    }
+                                }
+                                putJsonArray(identifier) {
+                                    add(dpJsonObject)
                                 }
                             }
-                            putJsonArray(identifier) {
-                                add(dpJsonObject)
+                            else -> {
+                                put(identifier, value.toString())
                             }
-                        }
-                        else -> {
-                            put(identifier, value.toString())
                         }
                     }
                 }
+                put("credentialSubject", credentialSubjectJsonObject)
+
             }
 
 
+
+
+/*
             //Optional to map json string to the data class
-            val vcJsonObject = Json.decodeFromString<ParsedVcResponse>(jsonObjectResult.toString())
+            val vcJsonObject = Json.decodeFromString<MDLVCResponse>(mDocVcJsonObject)
 
             val gson = Gson()
             val jsonString = gson.toJson(vcJsonObject)
@@ -71,8 +82,32 @@ class CborUtils {
 
             // val jsonString = vcJsonObject.toString()
             System.out.println("Json Object-->: ${vcJsonObject.toString()}")
+*/
 
-            return jsonObjectResult
+            return mDocVcJsonObject
+        }
+
+        private fun parseIssuerAuth(cbors: MutableList<DataItem>): JsonObject {
+
+
+            val validityJsonObjectResult = buildJsonObject {
+
+                val elements = cbors[0]["issuerSigned"]["issuerAuth"] as CborArray
+
+                elements.dataItems.forEachIndexed { index, dataItem ->
+                    if(index==2){
+                        val decodedissuerAuth =
+                            CborDecoder(ByteArrayInputStream((dataItem as CborByteString).bytes)).decode()
+                        var validityInfo = decodedissuerAuth[0]["validityInfo"]
+
+                        put("signed", validityInfo["signed"].toString())
+                        put("validFrom", validityInfo["validFrom"].toString())
+                        put("validUntil", validityInfo["validUntil"].toString())
+                    }
+
+                }
+            }
+            return validityJsonObjectResult
         }
     }
 

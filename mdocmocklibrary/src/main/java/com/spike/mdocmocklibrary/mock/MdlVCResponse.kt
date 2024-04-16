@@ -11,7 +11,25 @@ data class IssuerAPIResponse(
 
 
 @Serializable
-data class ParsedVcResponse(
+data class MDLVCResponse(
+    @SerialName("credentialSubject")
+    val credentialSubject: ParsedCredentialSubject,
+    @SerialName("validityInfo")
+    val validityInfo: ParsedValidityInfo,
+)
+
+@Serializable
+data class ParsedValidityInfo(
+    @SerialName("signed")
+    val signed: String,
+    @SerialName("validFrom")
+    val validFrom: String,
+    @SerialName("validUntil")
+    val validUntil: String
+)
+
+@Serializable
+data class ParsedCredentialSubject(
     @SerialName("given_name")
     val givenName: String,
     @SerialName("family_name")
