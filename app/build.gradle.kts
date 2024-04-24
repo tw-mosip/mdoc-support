@@ -53,8 +53,6 @@ android {
 dependencies {
 
     implementation(project(":mdocmocklibrary"))
-   // implementation(files("libs/mdocmocklibrary-debug.aar"))
-    //implementation("com.android.identity:identity-credential:20231002")
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-core:1.4.0")
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.4.0")
     implementation("co.nstant.in:cbor:0.9")

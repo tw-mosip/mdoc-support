@@ -4,9 +4,6 @@ import co.nstant.`in`.cbor.CborDecoder
 import co.nstant.`in`.cbor.model.Array
 import co.nstant.`in`.cbor.model.DataItem
 import co.nstant.`in`.cbor.model.MajorType
-import com.google.gson.Gson
-import com.spike.mdocmocklibrary.mock.MDLVCResponse
-import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.buildJsonObject
 import kotlinx.serialization.json.put
@@ -21,16 +18,20 @@ class CborUtils {
 
     companion object {
 
-
-        fun parseCborToGetJsonResponse(cborBytes: ByteArray): JsonObject {
-
+        fun parseDecodedData(cborBytes: ByteArray): JsonObject{
             val mDocVcJsonObject = buildJsonObject {
-
                 val cbors = CborDecoder(ByteArrayInputStream(cborBytes)).decode()
-
                 val validityInfoJsonObject = parseIssuerAuth(cbors)
-
                 put("validityInfo", validityInfoJsonObject)
+                val credentialSubjectJsonObject = parseCredentialSubject(cbors)
+                put("credentialSubject", credentialSubjectJsonObject)
+
+            }
+            return mDocVcJsonObject
+        }
+
+
+        private fun parseCredentialSubject(cbors: MutableList<DataItem>): JsonObject {
 
                 val elements =
                     cbors[0]["issuerSigned"]["nameSpaces"]["org.iso.18013.5.1"] as CborArray
@@ -65,26 +66,7 @@ class CborUtils {
                         }
                     }
                 }
-                put("credentialSubject", credentialSubjectJsonObject)
-
-            }
-
-
-
-
-/*
-            //Optional to map json string to the data class
-            val vcJsonObject = Json.decodeFromString<MDLVCResponse>(mDocVcJsonObject)
-
-            val gson = Gson()
-            val jsonString = gson.toJson(vcJsonObject)
-            System.out.println("Json String-->: $jsonString")
-
-            // val jsonString = vcJsonObject.toString()
-            System.out.println("Json Object-->: ${vcJsonObject.toString()}")
-*/
-
-            return mDocVcJsonObject
+            return credentialSubjectJsonObject
         }
 
         private fun parseIssuerAuth(cbors: MutableList<DataItem>): JsonObject {

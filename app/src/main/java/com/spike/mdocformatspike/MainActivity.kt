@@ -115,11 +115,8 @@ fun MainScreen( modifier: Modifier = Modifier) {
 fun parseMockData(context: Context, base64EncodedUrl: String): String {
 
     val decodedData: ByteArray = Base64.decode(base64EncodedUrl, Base64.URL_SAFE)
-    System.out.println("decodedData------->${decodedData.toString(Charsets.UTF_8)}")
-
-
-    val parsedJson = CborUtils.parseCborToGetJsonResponse(decodedData)
-    System.out.println("cborData in JSON------->$parsedJson")
+    val parsedJson = CborUtils.parseDecodedData(decodedData)
+    System.out.println("Final Result in JSON------->$parsedJson")
     Toast.makeText(context, "Parsing is Done", Toast.LENGTH_LONG).show()
     return  parsedJson.toString()
 }
