@@ -1,0 +1,18 @@
+use_frameworks!
+
+platform :ios, '10.0'
+
+target 'mdocSpikeLibrary_Example' do
+  pod 'mdocSpikeLibrary', :path => '/Users/balachandar.g/Desktop/mosip-account/my-repo/ios-playground/mdocSpikeLibrary'
+  pod 'SwiftCBOR'
+
+  target 'mdocSpikeLibrary_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
+
+#target 'mdocSpikeLibrary' do
+#  pod 'SwiftCBOR'
+#end

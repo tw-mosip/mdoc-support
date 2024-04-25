@@ -1,0 +1,24 @@
+PODS:
+  - mdocSpikeLibrary (0.1.0):
+    - SwiftCBOR (= 0.4.6)
+  - SwiftCBOR (0.4.6)
+
+DEPENDENCIES:
+  - mdocSpikeLibrary (from `/Users/balachandar.g/Desktop/mosip-account/my-repo/ios-playground/mdocSpikeLibrary`)
+  - SwiftCBOR
+
+SPEC REPOS:
+  trunk:
+    - SwiftCBOR
+
+EXTERNAL SOURCES:
+  mdocSpikeLibrary:
+    :path: "/Users/balachandar.g/Desktop/mosip-account/my-repo/ios-playground/mdocSpikeLibrary"
+
+SPEC CHECKSUMS:
+  mdocSpikeLibrary: a5fb607c03f568e1ebf9c052f8a1a61629bced3d
+  SwiftCBOR: 7ccf87a679e1981d3232b171a462b8863a6cb12e
+
+PODFILE CHECKSUM: f8b78e3f2a4b8b0badb4c79821b41e441a294115
+
+COCOAPODS: 1.14.3

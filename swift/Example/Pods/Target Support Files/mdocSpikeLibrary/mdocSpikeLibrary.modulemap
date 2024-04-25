@@ -1,0 +1,6 @@
+framework module mdocSpikeLibrary {
+  umbrella header "mdocSpikeLibrary-umbrella.h"
+
+  export *
+  module * { export * }
+}

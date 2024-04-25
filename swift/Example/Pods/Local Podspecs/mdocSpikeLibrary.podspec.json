@@ -1,0 +1,27 @@
+{
+  "name": "mdocSpikeLibrary",
+  "version": "0.1.0",
+  "summary": "A short description of mdocSpikeLibrary.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/BalachandarG/mdocSpikeLibrary",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "BalachandarG": "balachandar.g@thoughtworks.com"
+  },
+  "source": {
+    "git": "https://github.com/BalachandarG/mdocSpikeLibrary.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "10.0"
+  },
+  "source_files": "mdocSpikeLibrary/Classes/**/*",
+  "dependencies": {
+    "SwiftCBOR": [
+      "0.4.6"
+    ]
+  }
+}

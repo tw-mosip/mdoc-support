@@ -1,0 +1,1075 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 54;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1397EAE6844DC8B00FA230D862D1E5F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		1444A7D6806D9781DD866C3B4B30FAFE /* CodableCBOREncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5638BDE0EAF995A233C493A665EFB3 /* CodableCBOREncoder.swift */; };
+		1E39F9E8DC4D16C6C840129245571DF3 /* KeyedDecodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025683E4073A0233CEF01F68675E3AFF /* KeyedDecodingContainer.swift */; };
+		1FC8B60EA57AACF4608D2E7F0A8E6125 /* Pods-mdocSpikeLibrary_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E5BBF63CD6E61C9230193FB6242B3AF /* Pods-mdocSpikeLibrary_Example-dummy.m */; };
+		207251DB6B6674D32663821492B95039 /* CBOREncodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2160597C65FEDFDCFE0AEF6345EAB9 /* CBOREncodable.swift */; };
+		25CAB11AAD71C7EDD03D665815FC5ACA /* SingleValueEncodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C6107095CBA8F5FE72EDC24BD0E70E /* SingleValueEncodingContainer.swift */; };
+		260CC0AF428DA6CAB768E5167F86C52F /* Pods-mdocSpikeLibrary_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 240D9495CE2CA4116DD92317D1FF63D8 /* Pods-mdocSpikeLibrary_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		286B35D0D6A55F38F1586A3D9F4AA061 /* SwiftCBOR-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DAAAA6779F9349E5FD790F8D27639FA7 /* SwiftCBOR-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2EB36C1840AC5DA1BFEE1D108E33BB53 /* CodableCBORDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255CFB69CAA839DB9AA1FDF4CF3B797 /* CodableCBORDecoder.swift */; };
+		32AD61867E5EF9C0D3D1E0E69231A71B /* Pods-mdocSpikeLibrary_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 232CF2491F2E116EB315FF03983A3669 /* Pods-mdocSpikeLibrary_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		337CAC8DE03F14AC85C5C844F2381AFA /* AnyCodingKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EE861947CD1D02CECF9DA319B0DEB6 /* AnyCodingKey.swift */; };
+		4D3D846BC4F430834A2D0062712ED14A /* CBOR.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BA9A042F43BD32D5EE893E4571B6F4 /* CBOR.swift */; };
+		5DE471F826BD9B17221E3EF38BC75A57 /* mdocSpikeLibrary-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0FB2D18A20E6238FD6CB6646F41551B0 /* mdocSpikeLibrary-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5F532F8C80C331722F42E98E91181AE3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		6846EF3CCD292E6B66C9DC80832592FF /* UnkeyedEncodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356F064EA5B6B2F5378DF1FFE2FD5F1C /* UnkeyedEncodingContainer.swift */; };
+		6D71A2C5C095FCB27F9019D1ADF52AC5 /* FixedWidthInteger+Bytes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87ED28121E6519F0C9959EE160545D36 /* FixedWidthInteger+Bytes.swift */; };
+		70BFEBB542AD443BE5F9692A7DE55D5C /* CBOROptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94A20883B5E9747EBF1F2BD2090377C /* CBOROptions.swift */; };
+		75A0568D30DE52AC41949CFE8FB2D5E2 /* CBORDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57F80BB97D69C549158CE48F56354D2 /* CBORDecoder.swift */; };
+		982DAA4AB380A76419713789263967DA /* SingleValueDecodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659C95C456B4F37B243E819703EC94F2 /* SingleValueDecodingContainer.swift */; };
+		9869EE81761B55236A9AED1252E82CD1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		A1DA56CC1D4C460A914D9709C27B8366 /* SwiftCBOR-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FF2A2DDD700EAEAFC30B093552A56BEE /* SwiftCBOR-dummy.m */; };
+		A621A48357E60282F1F1D029968EF310 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E3C791B842AE60593DD481FAE77032 /* Util.swift */; };
+		B3EE1276901A64934C94A8CC51BA1C4C /* Pods-mdocSpikeLibrary_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 21AA5A333BB491F402A9099A81506115 /* Pods-mdocSpikeLibrary_Tests-dummy.m */; };
+		B708D5431153BE9B56406281CC0DEEB1 /* UnkeyedDecodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D719EBBE45A79B68097E24BE6257CB1 /* UnkeyedDecodingContainer.swift */; };
+		BD2A01FEC993C355CFCF5F55D0F76D9C /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B408B525AC3938ACD60EC4E7E6F29D /* SampleData.swift */; };
+		DDA1F505B338044C33036202FC44AE3D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		E9B42ED8C79563A044CFB31D6D1C05DB /* MDocLibrarySpike.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1F4758CDFAF825E1493253243920FB /* MDocLibrarySpike.swift */; };
+		EDC44A0E50B36F99461C21D2B0C40C6A /* KeyedEncodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C3DE0830E4383BC0A5024FAE4A0352 /* KeyedEncodingContainer.swift */; };
+		F28E2D9720FCCBC66F5BE1BB2C81603F /* CBORInputStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208EA3E457FB1ADA973EDA9880DF1E9A /* CBORInputStream.swift */; };
+		F90B4BAC14A128B0B5555F6AA9C3A1A2 /* mdocSpikeLibrary-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 52468B2D46504A52BF9A5F1D19ED3375 /* mdocSpikeLibrary-dummy.m */; };
+		FA11D72C53827F39908B34FE899AC202 /* CBOREncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFFD1161952ABEB1B76979E28F37D12 /* CBOREncoder.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1192EFF77481B7F9C66BC879AAB36C6A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 93F66C424ABCD5CEFB2E7D801A9D58E9;
+			remoteInfo = "Pods-mdocSpikeLibrary_Example";
+		};
+		276CEE731955A8A25CA0C07D3DE0A17D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 83AB5031998E119DFDFFDA70C3749F33;
+			remoteInfo = SwiftCBOR;
+		};
+		B6261FDD2F4D1E37C88A84FFDEBD86FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 83AB5031998E119DFDFFDA70C3749F33;
+			remoteInfo = SwiftCBOR;
+		};
+		DAEA4027F8B860915529B59A4A8117FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EADAE4670BE4D02E729036C3A29ECC4B;
+			remoteInfo = mdocSpikeLibrary;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		025683E4073A0233CEF01F68675E3AFF /* KeyedDecodingContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyedDecodingContainer.swift; path = Sources/Decoder/KeyedDecodingContainer.swift; sourceTree = "<group>"; };
+		08A7A2F57C05A680EC29F6A3794E2516 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		0F2160597C65FEDFDCFE0AEF6345EAB9 /* CBOREncodable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CBOREncodable.swift; path = Sources/CBOREncodable.swift; sourceTree = "<group>"; };
+		0FB2D18A20E6238FD6CB6646F41551B0 /* mdocSpikeLibrary-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "mdocSpikeLibrary-umbrella.h"; sourceTree = "<group>"; };
+		0FD127B6D8731807C5770A4076D97818 /* Pods-mdocSpikeLibrary_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-mdocSpikeLibrary_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		13EE861947CD1D02CECF9DA319B0DEB6 /* AnyCodingKey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnyCodingKey.swift; path = Sources/AnyCodingKey.swift; sourceTree = "<group>"; };
+		1707462FF2D0297A81EC31737FD60115 /* Pods-mdocSpikeLibrary_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-mdocSpikeLibrary_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		175AA0CBFCBF11F16F6D4989C7AAD30F /* Pods-mdocSpikeLibrary_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-mdocSpikeLibrary_Example.modulemap"; sourceTree = "<group>"; };
+		208EA3E457FB1ADA973EDA9880DF1E9A /* CBORInputStream.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CBORInputStream.swift; path = Sources/CBORInputStream.swift; sourceTree = "<group>"; };
+		21AA5A333BB491F402A9099A81506115 /* Pods-mdocSpikeLibrary_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-mdocSpikeLibrary_Tests-dummy.m"; sourceTree = "<group>"; };
+		232CF2491F2E116EB315FF03983A3669 /* Pods-mdocSpikeLibrary_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-mdocSpikeLibrary_Tests-umbrella.h"; sourceTree = "<group>"; };
+		240D9495CE2CA4116DD92317D1FF63D8 /* Pods-mdocSpikeLibrary_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-mdocSpikeLibrary_Example-umbrella.h"; sourceTree = "<group>"; };
+		356F064EA5B6B2F5378DF1FFE2FD5F1C /* UnkeyedEncodingContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UnkeyedEncodingContainer.swift; path = Sources/Encoder/UnkeyedEncodingContainer.swift; sourceTree = "<group>"; };
+		4543CAFF70F2E329A25E283E54D5A8EF /* mdocSpikeLibrary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = mdocSpikeLibrary.debug.xcconfig; sourceTree = "<group>"; };
+		52468B2D46504A52BF9A5F1D19ED3375 /* mdocSpikeLibrary-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "mdocSpikeLibrary-dummy.m"; sourceTree = "<group>"; };
+		5255CFB69CAA839DB9AA1FDF4CF3B797 /* CodableCBORDecoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CodableCBORDecoder.swift; path = Sources/Decoder/CodableCBORDecoder.swift; sourceTree = "<group>"; };
+		58FC67363BB27370518C7242841B7C61 /* Pods-mdocSpikeLibrary_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-mdocSpikeLibrary_Tests.modulemap"; sourceTree = "<group>"; };
+		5BF30157F24381114E6D95EE6AF96ED1 /* mdocSpikeLibrary.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = mdocSpikeLibrary.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		5CFFD1161952ABEB1B76979E28F37D12 /* CBOREncoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CBOREncoder.swift; path = Sources/CBOREncoder.swift; sourceTree = "<group>"; };
+		5D719EBBE45A79B68097E24BE6257CB1 /* UnkeyedDecodingContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UnkeyedDecodingContainer.swift; path = Sources/Decoder/UnkeyedDecodingContainer.swift; sourceTree = "<group>"; };
+		5E5638BDE0EAF995A233C493A665EFB3 /* CodableCBOREncoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CodableCBOREncoder.swift; path = Sources/Encoder/CodableCBOREncoder.swift; sourceTree = "<group>"; };
+		64DB0653BE50512CB20FEAEC88F1B4FA /* mdocSpikeLibrary */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = mdocSpikeLibrary; path = mdocSpikeLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		659C95C456B4F37B243E819703EC94F2 /* SingleValueDecodingContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SingleValueDecodingContainer.swift; path = Sources/Decoder/SingleValueDecodingContainer.swift; sourceTree = "<group>"; };
+		667893B87275713857061DE872E09C07 /* Pods-mdocSpikeLibrary_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-mdocSpikeLibrary_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		68E3C791B842AE60593DD481FAE77032 /* Util.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Util.swift; path = Sources/Util.swift; sourceTree = "<group>"; };
+		692C49B72714513DBB3721EC3CB83DC6 /* mdocSpikeLibrary.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = mdocSpikeLibrary.modulemap; sourceTree = "<group>"; };
+		6E5BBF63CD6E61C9230193FB6242B3AF /* Pods-mdocSpikeLibrary_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-mdocSpikeLibrary_Example-dummy.m"; sourceTree = "<group>"; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		75A34D55E8A867B5C9CC512DE71BEEAE /* Pods-mdocSpikeLibrary_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-mdocSpikeLibrary_Example.release.xcconfig"; sourceTree = "<group>"; };
+		830AAB66D6E3B953521EECA823A6562F /* Pods-mdocSpikeLibrary_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-mdocSpikeLibrary_Tests-Info.plist"; sourceTree = "<group>"; };
+		85C3DE0830E4383BC0A5024FAE4A0352 /* KeyedEncodingContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyedEncodingContainer.swift; path = Sources/Encoder/KeyedEncodingContainer.swift; sourceTree = "<group>"; };
+		8659ED108AFBE100FCE5DB81AFDC50F3 /* Pods-mdocSpikeLibrary_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-mdocSpikeLibrary_Example-frameworks.sh"; sourceTree = "<group>"; };
+		87ED28121E6519F0C9959EE160545D36 /* FixedWidthInteger+Bytes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "FixedWidthInteger+Bytes.swift"; path = "Sources/FixedWidthInteger+Bytes.swift"; sourceTree = "<group>"; };
+		8D42E7DDDE94A6A8142FB087D1E70840 /* Pods-mdocSpikeLibrary_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-mdocSpikeLibrary_Example"; path = Pods_mdocSpikeLibrary_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		91F6383CA0100A534AB6136926CB141C /* SwiftCBOR-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwiftCBOR-Info.plist"; sourceTree = "<group>"; };
+		965DDF26F90EC0576F97E740D35E5270 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		98E86BA979870CF0E99068A0BDB8C68D /* Pods-mdocSpikeLibrary_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-mdocSpikeLibrary_Example-Info.plist"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9DE8F3C9A3A409220744C9648322F462 /* SwiftCBOR.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftCBOR.modulemap; sourceTree = "<group>"; };
+		A8C8BFE1A00A932D6F99DD96E97C35F9 /* Pods-mdocSpikeLibrary_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-mdocSpikeLibrary_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		B1B408B525AC3938ACD60EC4E7E6F29D /* SampleData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SampleData.swift; path = mdocSpikeLibrary/Classes/SampleData.swift; sourceTree = "<group>"; };
+		B94A20883B5E9747EBF1F2BD2090377C /* CBOROptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CBOROptions.swift; path = Sources/CBOROptions.swift; sourceTree = "<group>"; };
+		BE7F0B084D381D77AC279AD64C165EF1 /* mdocSpikeLibrary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = mdocSpikeLibrary.release.xcconfig; sourceTree = "<group>"; };
+		C2B916EFBD81C3CC26C56BA572C3121F /* mdocSpikeLibrary-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "mdocSpikeLibrary-Info.plist"; sourceTree = "<group>"; };
+		CB1F4758CDFAF825E1493253243920FB /* MDocLibrarySpike.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MDocLibrarySpike.swift; path = mdocSpikeLibrary/Classes/MDocLibrarySpike.swift; sourceTree = "<group>"; };
+		CDD03C0C2E2D93A259802635147A349F /* mdocSpikeLibrary-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "mdocSpikeLibrary-prefix.pch"; sourceTree = "<group>"; };
+		CE09E24D8F193EB05E20CB2CD76EA1A7 /* SwiftCBOR */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftCBOR; path = SwiftCBOR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0C97BE230BE3D40A17C91B74B3AB9E1 /* SwiftCBOR-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftCBOR-prefix.pch"; sourceTree = "<group>"; };
+		D351568B827C4A606B1C0BAFEF7E48E8 /* SwiftCBOR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftCBOR.debug.xcconfig; sourceTree = "<group>"; };
+		D3915C7D93EE9C1893A8FC6BCC857C45 /* Pods-mdocSpikeLibrary_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-mdocSpikeLibrary_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		D97414A3A918BB8DEF6AF4E44F9E3960 /* SwiftCBOR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftCBOR.release.xcconfig; sourceTree = "<group>"; };
+		DAAAA6779F9349E5FD790F8D27639FA7 /* SwiftCBOR-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftCBOR-umbrella.h"; sourceTree = "<group>"; };
+		E57F80BB97D69C549158CE48F56354D2 /* CBORDecoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CBORDecoder.swift; path = Sources/CBORDecoder.swift; sourceTree = "<group>"; };
+		E6BA9A042F43BD32D5EE893E4571B6F4 /* CBOR.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CBOR.swift; path = Sources/CBOR.swift; sourceTree = "<group>"; };
+		E912B5FE22FC6800564A03ED7C5A8F02 /* Pods-mdocSpikeLibrary_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-mdocSpikeLibrary_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		EC67C556868AC496C94A3EBD9BE316C1 /* Pods-mdocSpikeLibrary_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-mdocSpikeLibrary_Tests"; path = Pods_mdocSpikeLibrary_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3C6107095CBA8F5FE72EDC24BD0E70E /* SingleValueEncodingContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SingleValueEncodingContainer.swift; path = Sources/Encoder/SingleValueEncodingContainer.swift; sourceTree = "<group>"; };
+		F6E56556AFCF2675F2CCE7F9FAB86FD7 /* Pods-mdocSpikeLibrary_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-mdocSpikeLibrary_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		FF2A2DDD700EAEAFC30B093552A56BEE /* SwiftCBOR-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftCBOR-dummy.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		04B373C2D35AEDEA2B709CE789FC412A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDA1F505B338044C33036202FC44AE3D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5A165F776EAA53DC0100011EEEC0CED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1397EAE6844DC8B00FA230D862D1E5F8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7A802675FBB212B2A5E19C2D7C9CCE5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9869EE81761B55236A9AED1252E82CD1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC418BEB7690052A576A9E7AF0D73DDA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F532F8C80C331722F42E98E91181AE3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00AC067FF5666B7DDEBF340402D9291B /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				692C49B72714513DBB3721EC3CB83DC6 /* mdocSpikeLibrary.modulemap */,
+				52468B2D46504A52BF9A5F1D19ED3375 /* mdocSpikeLibrary-dummy.m */,
+				C2B916EFBD81C3CC26C56BA572C3121F /* mdocSpikeLibrary-Info.plist */,
+				CDD03C0C2E2D93A259802635147A349F /* mdocSpikeLibrary-prefix.pch */,
+				0FB2D18A20E6238FD6CB6646F41551B0 /* mdocSpikeLibrary-umbrella.h */,
+				4543CAFF70F2E329A25E283E54D5A8EF /* mdocSpikeLibrary.debug.xcconfig */,
+				BE7F0B084D381D77AC279AD64C165EF1 /* mdocSpikeLibrary.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../../../test-spike-repo-library/mdoc-format-spike/swift/Example/Pods/Target Support Files/mdocSpikeLibrary";
+			sourceTree = "<group>";
+		};
+		21203BAC1A7DBF13FD07E4FFC0184BB0 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				87851E4523BDE4002D0540075D3790AF /* mdocSpikeLibrary */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		3873E656008533A63C41F10E33440A79 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C1C190D6CFE19A05D2EB19710F676B19 /* SwiftCBOR */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		553FE5277DF5410D946683400F5D9F29 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				64DB0653BE50512CB20FEAEC88F1B4FA /* mdocSpikeLibrary */,
+				8D42E7DDDE94A6A8142FB087D1E70840 /* Pods-mdocSpikeLibrary_Example */,
+				EC67C556868AC496C94A3EBD9BE316C1 /* Pods-mdocSpikeLibrary_Tests */,
+				CE09E24D8F193EB05E20CB2CD76EA1A7 /* SwiftCBOR */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		7616D1C4F7B84FCECBC2A41A4CABC630 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				08A7A2F57C05A680EC29F6A3794E2516 /* LICENSE */,
+				5BF30157F24381114E6D95EE6AF96ED1 /* mdocSpikeLibrary.podspec */,
+				965DDF26F90EC0576F97E740D35E5270 /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		87851E4523BDE4002D0540075D3790AF /* mdocSpikeLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				CB1F4758CDFAF825E1493253243920FB /* MDocLibrarySpike.swift */,
+				B1B408B525AC3938ACD60EC4E7E6F29D /* SampleData.swift */,
+				7616D1C4F7B84FCECBC2A41A4CABC630 /* Pod */,
+				00AC067FF5666B7DDEBF340402D9291B /* Support Files */,
+			);
+			name = mdocSpikeLibrary;
+			path = "/Users/balachandar.g/Desktop/mosip-account/my-repo/ios-playground/mdocSpikeLibrary";
+			sourceTree = "<absolute>";
+		};
+		9543F72C093BB39D0682F2D7CDE355CC /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				CEE7E931EA8F9029855F2552B8C7C1A6 /* Pods-mdocSpikeLibrary_Example */,
+				F61C07A28D13F9F403C18E2D405D5E34 /* Pods-mdocSpikeLibrary_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		9ACCDCAF7303132181A963E3D5ED3EE2 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9DE8F3C9A3A409220744C9648322F462 /* SwiftCBOR.modulemap */,
+				FF2A2DDD700EAEAFC30B093552A56BEE /* SwiftCBOR-dummy.m */,
+				91F6383CA0100A534AB6136926CB141C /* SwiftCBOR-Info.plist */,
+				D0C97BE230BE3D40A17C91B74B3AB9E1 /* SwiftCBOR-prefix.pch */,
+				DAAAA6779F9349E5FD790F8D27639FA7 /* SwiftCBOR-umbrella.h */,
+				D351568B827C4A606B1C0BAFEF7E48E8 /* SwiftCBOR.debug.xcconfig */,
+				D97414A3A918BB8DEF6AF4E44F9E3960 /* SwiftCBOR.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftCBOR";
+			sourceTree = "<group>";
+		};
+		C1C190D6CFE19A05D2EB19710F676B19 /* SwiftCBOR */ = {
+			isa = PBXGroup;
+			children = (
+				13EE861947CD1D02CECF9DA319B0DEB6 /* AnyCodingKey.swift */,
+				E6BA9A042F43BD32D5EE893E4571B6F4 /* CBOR.swift */,
+				E57F80BB97D69C549158CE48F56354D2 /* CBORDecoder.swift */,
+				0F2160597C65FEDFDCFE0AEF6345EAB9 /* CBOREncodable.swift */,
+				5CFFD1161952ABEB1B76979E28F37D12 /* CBOREncoder.swift */,
+				208EA3E457FB1ADA973EDA9880DF1E9A /* CBORInputStream.swift */,
+				B94A20883B5E9747EBF1F2BD2090377C /* CBOROptions.swift */,
+				5255CFB69CAA839DB9AA1FDF4CF3B797 /* CodableCBORDecoder.swift */,
+				5E5638BDE0EAF995A233C493A665EFB3 /* CodableCBOREncoder.swift */,
+				87ED28121E6519F0C9959EE160545D36 /* FixedWidthInteger+Bytes.swift */,
+				025683E4073A0233CEF01F68675E3AFF /* KeyedDecodingContainer.swift */,
+				85C3DE0830E4383BC0A5024FAE4A0352 /* KeyedEncodingContainer.swift */,
+				659C95C456B4F37B243E819703EC94F2 /* SingleValueDecodingContainer.swift */,
+				F3C6107095CBA8F5FE72EDC24BD0E70E /* SingleValueEncodingContainer.swift */,
+				5D719EBBE45A79B68097E24BE6257CB1 /* UnkeyedDecodingContainer.swift */,
+				356F064EA5B6B2F5378DF1FFE2FD5F1C /* UnkeyedEncodingContainer.swift */,
+				68E3C791B842AE60593DD481FAE77032 /* Util.swift */,
+				9ACCDCAF7303132181A963E3D5ED3EE2 /* Support Files */,
+			);
+			name = SwiftCBOR;
+			path = SwiftCBOR;
+			sourceTree = "<group>";
+		};
+		CEE7E931EA8F9029855F2552B8C7C1A6 /* Pods-mdocSpikeLibrary_Example */ = {
+			isa = PBXGroup;
+			children = (
+				175AA0CBFCBF11F16F6D4989C7AAD30F /* Pods-mdocSpikeLibrary_Example.modulemap */,
+				1707462FF2D0297A81EC31737FD60115 /* Pods-mdocSpikeLibrary_Example-acknowledgements.markdown */,
+				667893B87275713857061DE872E09C07 /* Pods-mdocSpikeLibrary_Example-acknowledgements.plist */,
+				6E5BBF63CD6E61C9230193FB6242B3AF /* Pods-mdocSpikeLibrary_Example-dummy.m */,
+				8659ED108AFBE100FCE5DB81AFDC50F3 /* Pods-mdocSpikeLibrary_Example-frameworks.sh */,
+				98E86BA979870CF0E99068A0BDB8C68D /* Pods-mdocSpikeLibrary_Example-Info.plist */,
+				240D9495CE2CA4116DD92317D1FF63D8 /* Pods-mdocSpikeLibrary_Example-umbrella.h */,
+				A8C8BFE1A00A932D6F99DD96E97C35F9 /* Pods-mdocSpikeLibrary_Example.debug.xcconfig */,
+				75A34D55E8A867B5C9CC512DE71BEEAE /* Pods-mdocSpikeLibrary_Example.release.xcconfig */,
+			);
+			name = "Pods-mdocSpikeLibrary_Example";
+			path = "Target Support Files/Pods-mdocSpikeLibrary_Example";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				21203BAC1A7DBF13FD07E4FFC0184BB0 /* Development Pods */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				3873E656008533A63C41F10E33440A79 /* Pods */,
+				553FE5277DF5410D946683400F5D9F29 /* Products */,
+				9543F72C093BB39D0682F2D7CDE355CC /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F61C07A28D13F9F403C18E2D405D5E34 /* Pods-mdocSpikeLibrary_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				58FC67363BB27370518C7242841B7C61 /* Pods-mdocSpikeLibrary_Tests.modulemap */,
+				E912B5FE22FC6800564A03ED7C5A8F02 /* Pods-mdocSpikeLibrary_Tests-acknowledgements.markdown */,
+				F6E56556AFCF2675F2CCE7F9FAB86FD7 /* Pods-mdocSpikeLibrary_Tests-acknowledgements.plist */,
+				21AA5A333BB491F402A9099A81506115 /* Pods-mdocSpikeLibrary_Tests-dummy.m */,
+				830AAB66D6E3B953521EECA823A6562F /* Pods-mdocSpikeLibrary_Tests-Info.plist */,
+				232CF2491F2E116EB315FF03983A3669 /* Pods-mdocSpikeLibrary_Tests-umbrella.h */,
+				0FD127B6D8731807C5770A4076D97818 /* Pods-mdocSpikeLibrary_Tests.debug.xcconfig */,
+				D3915C7D93EE9C1893A8FC6BCC857C45 /* Pods-mdocSpikeLibrary_Tests.release.xcconfig */,
+			);
+			name = "Pods-mdocSpikeLibrary_Tests";
+			path = "Target Support Files/Pods-mdocSpikeLibrary_Tests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		44B2A7747AF1DAC5923289652A81786B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DE471F826BD9B17221E3EF38BC75A57 /* mdocSpikeLibrary-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CD1C7DF029A0AAD773DF7D1C015B837 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				260CC0AF428DA6CAB768E5167F86C52F /* Pods-mdocSpikeLibrary_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9021C9F9D3C52AFA68F3C1FC20C5E38A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32AD61867E5EF9C0D3D1E0E69231A71B /* Pods-mdocSpikeLibrary_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6193E3F64CFC5D92FA3636BBE1E1229 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				286B35D0D6A55F38F1586A3D9F4AA061 /* SwiftCBOR-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		3DC61A2223434885DBD0094B24F158FB /* Pods-mdocSpikeLibrary_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E6134B1362913830E5E8213329C363C6 /* Build configuration list for PBXNativeTarget "Pods-mdocSpikeLibrary_Tests" */;
+			buildPhases = (
+				9021C9F9D3C52AFA68F3C1FC20C5E38A /* Headers */,
+				33AD229DB02AAD971CD55E44A32373A8 /* Sources */,
+				B7A802675FBB212B2A5E19C2D7C9CCE5 /* Frameworks */,
+				3E3BCBAEB94E09D1FC78A7890FC53419 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				057253A38FCD6A9DCBA0F01EB06735C0 /* PBXTargetDependency */,
+			);
+			name = "Pods-mdocSpikeLibrary_Tests";
+			productName = Pods_mdocSpikeLibrary_Tests;
+			productReference = EC67C556868AC496C94A3EBD9BE316C1 /* Pods-mdocSpikeLibrary_Tests */;
+			productType = "com.apple.product-type.framework";
+		};
+		83AB5031998E119DFDFFDA70C3749F33 /* SwiftCBOR */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 869D89C8A62F542C2A3556DC7AD221AF /* Build configuration list for PBXNativeTarget "SwiftCBOR" */;
+			buildPhases = (
+				F6193E3F64CFC5D92FA3636BBE1E1229 /* Headers */,
+				EC20593E77E9457F448E997CB32278FE /* Sources */,
+				04B373C2D35AEDEA2B709CE789FC412A /* Frameworks */,
+				93B1301D4F062C82B8DF3F6894943472 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftCBOR;
+			productName = SwiftCBOR;
+			productReference = CE09E24D8F193EB05E20CB2CD76EA1A7 /* SwiftCBOR */;
+			productType = "com.apple.product-type.framework";
+		};
+		93F66C424ABCD5CEFB2E7D801A9D58E9 /* Pods-mdocSpikeLibrary_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3B0A4A36B0EA91B320D2062E693B09B /* Build configuration list for PBXNativeTarget "Pods-mdocSpikeLibrary_Example" */;
+			buildPhases = (
+				4CD1C7DF029A0AAD773DF7D1C015B837 /* Headers */,
+				17C45C692607EF5313C1BEEBCF505A28 /* Sources */,
+				EC418BEB7690052A576A9E7AF0D73DDA /* Frameworks */,
+				07A37871039722AB857DC19FE76BA608 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				389229A4B6547A47414FDE5CB15AF483 /* PBXTargetDependency */,
+				CA21A57FCBCDCEF7E89282A6353CA03E /* PBXTargetDependency */,
+			);
+			name = "Pods-mdocSpikeLibrary_Example";
+			productName = Pods_mdocSpikeLibrary_Example;
+			productReference = 8D42E7DDDE94A6A8142FB087D1E70840 /* Pods-mdocSpikeLibrary_Example */;
+			productType = "com.apple.product-type.framework";
+		};
+		EADAE4670BE4D02E729036C3A29ECC4B /* mdocSpikeLibrary */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 12658913EBD3235CD64E5A97FAC4F8A9 /* Build configuration list for PBXNativeTarget "mdocSpikeLibrary" */;
+			buildPhases = (
+				44B2A7747AF1DAC5923289652A81786B /* Headers */,
+				5C1CB77918D5D3B77022F81238BF98F2 /* Sources */,
+				B5A165F776EAA53DC0100011EEEC0CED /* Frameworks */,
+				161FF0CC9B78E12B604D83C97A5BEFE7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0F4D5F87CB68EE8A151A0AA6EDB245EF /* PBXTargetDependency */,
+			);
+			name = mdocSpikeLibrary;
+			productName = mdocSpikeLibrary;
+			productReference = 64DB0653BE50512CB20FEAEC88F1B4FA /* mdocSpikeLibrary */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 12.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 553FE5277DF5410D946683400F5D9F29 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EADAE4670BE4D02E729036C3A29ECC4B /* mdocSpikeLibrary */,
+				93F66C424ABCD5CEFB2E7D801A9D58E9 /* Pods-mdocSpikeLibrary_Example */,
+				3DC61A2223434885DBD0094B24F158FB /* Pods-mdocSpikeLibrary_Tests */,
+				83AB5031998E119DFDFFDA70C3749F33 /* SwiftCBOR */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		07A37871039722AB857DC19FE76BA608 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		161FF0CC9B78E12B604D83C97A5BEFE7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E3BCBAEB94E09D1FC78A7890FC53419 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93B1301D4F062C82B8DF3F6894943472 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		17C45C692607EF5313C1BEEBCF505A28 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FC8B60EA57AACF4608D2E7F0A8E6125 /* Pods-mdocSpikeLibrary_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33AD229DB02AAD971CD55E44A32373A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3EE1276901A64934C94A8CC51BA1C4C /* Pods-mdocSpikeLibrary_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C1CB77918D5D3B77022F81238BF98F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9B42ED8C79563A044CFB31D6D1C05DB /* MDocLibrarySpike.swift in Sources */,
+				F90B4BAC14A128B0B5555F6AA9C3A1A2 /* mdocSpikeLibrary-dummy.m in Sources */,
+				BD2A01FEC993C355CFCF5F55D0F76D9C /* SampleData.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC20593E77E9457F448E997CB32278FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				337CAC8DE03F14AC85C5C844F2381AFA /* AnyCodingKey.swift in Sources */,
+				4D3D846BC4F430834A2D0062712ED14A /* CBOR.swift in Sources */,
+				75A0568D30DE52AC41949CFE8FB2D5E2 /* CBORDecoder.swift in Sources */,
+				207251DB6B6674D32663821492B95039 /* CBOREncodable.swift in Sources */,
+				FA11D72C53827F39908B34FE899AC202 /* CBOREncoder.swift in Sources */,
+				F28E2D9720FCCBC66F5BE1BB2C81603F /* CBORInputStream.swift in Sources */,
+				70BFEBB542AD443BE5F9692A7DE55D5C /* CBOROptions.swift in Sources */,
+				2EB36C1840AC5DA1BFEE1D108E33BB53 /* CodableCBORDecoder.swift in Sources */,
+				1444A7D6806D9781DD866C3B4B30FAFE /* CodableCBOREncoder.swift in Sources */,
+				6D71A2C5C095FCB27F9019D1ADF52AC5 /* FixedWidthInteger+Bytes.swift in Sources */,
+				1E39F9E8DC4D16C6C840129245571DF3 /* KeyedDecodingContainer.swift in Sources */,
+				EDC44A0E50B36F99461C21D2B0C40C6A /* KeyedEncodingContainer.swift in Sources */,
+				982DAA4AB380A76419713789263967DA /* SingleValueDecodingContainer.swift in Sources */,
+				25CAB11AAD71C7EDD03D665815FC5ACA /* SingleValueEncodingContainer.swift in Sources */,
+				A1DA56CC1D4C460A914D9709C27B8366 /* SwiftCBOR-dummy.m in Sources */,
+				B708D5431153BE9B56406281CC0DEEB1 /* UnkeyedDecodingContainer.swift in Sources */,
+				6846EF3CCD292E6B66C9DC80832592FF /* UnkeyedEncodingContainer.swift in Sources */,
+				A621A48357E60282F1F1D029968EF310 /* Util.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		057253A38FCD6A9DCBA0F01EB06735C0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-mdocSpikeLibrary_Example";
+			target = 93F66C424ABCD5CEFB2E7D801A9D58E9 /* Pods-mdocSpikeLibrary_Example */;
+			targetProxy = 1192EFF77481B7F9C66BC879AAB36C6A /* PBXContainerItemProxy */;
+		};
+		0F4D5F87CB68EE8A151A0AA6EDB245EF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftCBOR;
+			target = 83AB5031998E119DFDFFDA70C3749F33 /* SwiftCBOR */;
+			targetProxy = B6261FDD2F4D1E37C88A84FFDEBD86FE /* PBXContainerItemProxy */;
+		};
+		389229A4B6547A47414FDE5CB15AF483 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftCBOR;
+			target = 83AB5031998E119DFDFFDA70C3749F33 /* SwiftCBOR */;
+			targetProxy = 276CEE731955A8A25CA0C07D3DE0A17D /* PBXContainerItemProxy */;
+		};
+		CA21A57FCBCDCEF7E89282A6353CA03E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = mdocSpikeLibrary;
+			target = EADAE4670BE4D02E729036C3A29ECC4B /* mdocSpikeLibrary */;
+			targetProxy = DAEA4027F8B860915529B59A4A8117FC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		50B7F1708A8ADBE08533D3BB76EDB939 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D351568B827C4A606B1C0BAFEF7E48E8 /* SwiftCBOR.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftCBOR/SwiftCBOR-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftCBOR/SwiftCBOR-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SwiftCBOR/SwiftCBOR.modulemap";
+				PRODUCT_MODULE_NAME = SwiftCBOR;
+				PRODUCT_NAME = SwiftCBOR;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		58A96C9064B558D32303684130264D01 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75A34D55E8A867B5C9CC512DE71BEEAE /* Pods-mdocSpikeLibrary_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-mdocSpikeLibrary_Example/Pods-mdocSpikeLibrary_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-mdocSpikeLibrary_Example/Pods-mdocSpikeLibrary_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		61FA68116EAAE3FC79029E5F88D41CE3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D97414A3A918BB8DEF6AF4E44F9E3960 /* SwiftCBOR.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftCBOR/SwiftCBOR-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftCBOR/SwiftCBOR-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SwiftCBOR/SwiftCBOR.modulemap";
+				PRODUCT_MODULE_NAME = SwiftCBOR;
+				PRODUCT_NAME = SwiftCBOR;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7EE7A78859F657F6BEFC651185B43192 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		8DC0DDE839E16997594A689AD20E3AE7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0FD127B6D8731807C5770A4076D97818 /* Pods-mdocSpikeLibrary_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-mdocSpikeLibrary_Tests/Pods-mdocSpikeLibrary_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-mdocSpikeLibrary_Tests/Pods-mdocSpikeLibrary_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B49C1912CE0000BD55CF3BBC5FAA780E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A8C8BFE1A00A932D6F99DD96E97C35F9 /* Pods-mdocSpikeLibrary_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-mdocSpikeLibrary_Example/Pods-mdocSpikeLibrary_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-mdocSpikeLibrary_Example/Pods-mdocSpikeLibrary_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C1762EC69E17FF4BA089B0280C5A5F49 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE7F0B084D381D77AC279AD64C165EF1 /* mdocSpikeLibrary.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/mdocSpikeLibrary/mdocSpikeLibrary-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/mdocSpikeLibrary/mdocSpikeLibrary-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/mdocSpikeLibrary/mdocSpikeLibrary.modulemap";
+				PRODUCT_MODULE_NAME = mdocSpikeLibrary;
+				PRODUCT_NAME = mdocSpikeLibrary;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D299434AB35E7FD6F7921C8EF24742FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		E39666FCED8E910C8E420D089E63DA26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4543CAFF70F2E329A25E283E54D5A8EF /* mdocSpikeLibrary.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/mdocSpikeLibrary/mdocSpikeLibrary-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/mdocSpikeLibrary/mdocSpikeLibrary-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/mdocSpikeLibrary/mdocSpikeLibrary.modulemap";
+				PRODUCT_MODULE_NAME = mdocSpikeLibrary;
+				PRODUCT_NAME = mdocSpikeLibrary;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FE258B2A63F2F53C4ED6240476920E5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3915C7D93EE9C1893A8FC6BCC857C45 /* Pods-mdocSpikeLibrary_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-mdocSpikeLibrary_Tests/Pods-mdocSpikeLibrary_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-mdocSpikeLibrary_Tests/Pods-mdocSpikeLibrary_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		12658913EBD3235CD64E5A97FAC4F8A9 /* Build configuration list for PBXNativeTarget "mdocSpikeLibrary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E39666FCED8E910C8E420D089E63DA26 /* Debug */,
+				C1762EC69E17FF4BA089B0280C5A5F49 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D299434AB35E7FD6F7921C8EF24742FF /* Debug */,
+				7EE7A78859F657F6BEFC651185B43192 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		869D89C8A62F542C2A3556DC7AD221AF /* Build configuration list for PBXNativeTarget "SwiftCBOR" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50B7F1708A8ADBE08533D3BB76EDB939 /* Debug */,
+				61FA68116EAAE3FC79029E5F88D41CE3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E6134B1362913830E5E8213329C363C6 /* Build configuration list for PBXNativeTarget "Pods-mdocSpikeLibrary_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8DC0DDE839E16997594A689AD20E3AE7 /* Debug */,
+				FE258B2A63F2F53C4ED6240476920E5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3B0A4A36B0EA91B320D2062E693B09B /* Build configuration list for PBXNativeTarget "Pods-mdocSpikeLibrary_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B49C1912CE0000BD55CF3BBC5FAA780E /* Debug */,
+				58A96C9064B558D32303684130264D01 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

@@ -1,0 +1,6 @@
+framework module Pods_mdocSpikeLibrary_Example {
+  umbrella header "Pods-mdocSpikeLibrary_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
