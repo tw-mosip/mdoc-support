@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var jsonResult: UILabel!
     @IBAction func parseMDocCBOR(_ sender: Any) {
         
-        let parsedJson = library.decodeAndParseCBOR()
+        let parsedJson = library.decodeAndParseMdoc(base64EncodedString: base64EncodedString)
         print("Parsed json From iOS Library", parsedJson)
         jsonResult.text = "Parsed mDL VC in Json from iOS Library---->"+parsedJson
     }
@@ -39,3 +39,14 @@ class ViewController: UIViewController {
    
 
 }
+extension Data {
+  init?(base64EncodedURLSafe string: String, options: Base64DecodingOptions = []) {
+    let string =
+      string
+      .replacingOccurrences(of: "-", with: "+")
+      .replacingOccurrences(of: "_", with: "/")
+
+    self.init(base64Encoded: string, options: options)
+  }
+}
+

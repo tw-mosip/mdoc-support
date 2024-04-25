@@ -93,8 +93,9 @@ fun MainScreen( modifier: Modifier = Modifier) {
 
         Button(modifier = Modifier.padding(16.dp),onClick = {
             if(base64URL.isNotEmpty()){
-                val result = parseMockData(context,base64URL)
-                responseText = "Parsed mDL VC in Json from Android Library---->$result"
+                val parsedJson = CborUtils.decodeAndParseMDocData(base64URL)
+                responseText = "Parsed mDL VC in Json from Android Library---->>$parsedJson"
+                System.out.println("Parsed mDL VC in Json from Android Library------->>$parsedJson")
             } else {
                 Toast.makeText(context, "Base64 URL not found, make API call and then parse it.", Toast.LENGTH_LONG).show()
             }
@@ -111,17 +112,6 @@ fun MainScreen( modifier: Modifier = Modifier) {
 
 }
 
-
-fun parseMockData(context: Context, base64EncodedUrl: String): String {
-
-    val decodedData: ByteArray = Base64.decode(base64EncodedUrl, Base64.URL_SAFE)
-
-
-    val parsedJson = CborUtils.decodeAndParseMDocData(decodedData)
-    System.out.println("Parsed mDL VC in Json from Android Library------->$parsedJson")
-    Toast.makeText(context, "Parsing is Done", Toast.LENGTH_LONG).show()
-    return  parsedJson.toString()
-}
 
 
 @Preview(showBackground = true)

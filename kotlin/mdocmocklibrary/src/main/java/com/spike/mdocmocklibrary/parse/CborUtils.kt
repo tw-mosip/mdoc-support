@@ -1,6 +1,7 @@
 package com.spike.mdocmocklibrary.parse
 
 
+import android.util.Base64
 import co.nstant.`in`.cbor.CborDecoder
 import co.nstant.`in`.cbor.model.Array
 import co.nstant.`in`.cbor.model.DataItem
@@ -19,9 +20,12 @@ class CborUtils {
 
     companion object {
 
-        fun decodeAndParseMDocData(cborBytes: ByteArray): JsonObject{
+        fun decodeAndParseMDocData(base64EncodedUrl: String): JsonObject{
+
+            val decodedData: ByteArray = Base64.decode(base64EncodedUrl, Base64.URL_SAFE)
+
             val mDocVcJsonObject = buildJsonObject {
-                val cbors = CborDecoder(ByteArrayInputStream(cborBytes)).decode()
+                val cbors = CborDecoder(ByteArrayInputStream(decodedData)).decode()
                 val validityInfoJsonObject = parseIssuerAuth(cbors)
                 put("validityInfo", validityInfoJsonObject)
                 val credentialSubjectJsonObject = parseCredentialSubject(cbors)
