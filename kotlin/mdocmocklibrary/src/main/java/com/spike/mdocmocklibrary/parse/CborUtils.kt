@@ -22,8 +22,10 @@ class CborUtils {
 
         fun decodeAndParseMDocData(base64EncodedUrl: String): JsonObject{
 
+            /** Decode the base64 URL String*/
             val decodedData: ByteArray = Base64.decode(base64EncodedUrl, Base64.URL_SAFE)
 
+            /** Decode the CBOR data  */
             val mDocVcJsonObject = buildJsonObject {
                 val cbors = CborDecoder(ByteArrayInputStream(decodedData)).decode()
                 val validityInfoJsonObject = parseIssuerAuth(cbors)
@@ -36,6 +38,8 @@ class CborUtils {
         }
 
 
+
+        /** Parse  the Credential Subject Block   */
         private fun parseCredentialSubject(cbors: MutableList<DataItem>): JsonObject {
 
             val elements =
@@ -74,6 +78,7 @@ class CborUtils {
             return credentialSubjectJsonObject
         }
 
+        /** Parse  the IssuerAuth Block   */
         private fun parseIssuerAuth(cbors: MutableList<DataItem>): JsonObject {
 
 

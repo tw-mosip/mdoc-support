@@ -5,17 +5,21 @@ import SwiftCBOR
 
 public class CborLibrayUtils{
     public init() {}
-    public func greet(){
-        print("Hello world")
-    }
     
-    public func decodeAndParseCBOR() -> String{
+    public func decodeAndParseMdoc(base64EncodedString: String) -> String{
+        
+        
+        /** Decode the base64 URL String*/
+        
         guard let decodedBase64Data = Data(base64EncodedURLSafe: base64EncodedString) else {
           // handle errors in decoding base64 string here
-          print("error data ---->")
+          print("Please provide valid base64 URL string")
           return ""
         }
 
+        
+        /** Decode the CBOR data  */
+        
         let inputToCBORDecode = Array(decodedBase64Data)
 
         let decodedCBORData = try! CBOR.decode(inputToCBORDecode)
@@ -26,14 +30,11 @@ public class CborLibrayUtils{
         jsonResult["credentialSubject"] = decodeAndParseCredentialSubject(
           decodedCBORData: decodedCBORData)
 
-        // Convert the dictionary to JSON data
+        /** Convert the dictionary to JSON data  */
         do {
           let jsonData = try JSONSerialization.data(withJSONObject: jsonResult, options: [])
-
-          // Print the JSON data
-            let jsonObject = String(data: jsonData, encoding: .utf8)!
+          let jsonObject = String(data: jsonData, encoding: .utf8)!
             
-            print("Final JSON Result ---->", jsonObject)
             return jsonObject
         } catch {
           print("Error converting to JSON: \(error)")
@@ -41,6 +42,8 @@ public class CborLibrayUtils{
         }
        
     }
+    
+    /** Parse  the IssuerAuth Block   */
     
     func decodeAndParseIssuerAuth(decodedCBORData: CBOR?) -> [String: Any] {
       let issuerAuth = decodedCBORData?["issuerSigned"]?["issuerAuth"]
@@ -83,6 +86,10 @@ public class CborLibrayUtils{
       return validityInfoJson
     }
 
+    
+    /** Parse  the Credential Subject Block   */
+    
+    
     func decodeAndParseCredentialSubject(decodedCBORData: CBOR?) -> [String: Any] {
       var credentialSubjectJson = [String: Any]()
 

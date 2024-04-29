@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     @IBAction func parseMDocCBOR(_ sender: Any) {
         
         let parsedJson = library.decodeAndParseMdoc(base64EncodedString: base64EncodedString)
-        print("Parsed json From iOS Library", parsedJson)
+        print("Parsed json From iOS Library--->", parsedJson)
         jsonResult.text = "Parsed mDL VC in Json from iOS Library---->"+parsedJson
     }
     

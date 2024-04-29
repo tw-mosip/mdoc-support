@@ -23,7 +23,10 @@ const decodeBase64URL = (input) => {
 export const decodeAndParseCborData = (base64url) => {
   
 
+    /** Decode the base64 URL String*/
     var decodedByteArray = decodeBase64URL(base64url)
+
+    /** Decode the CBOR data  */
     var decodedCborData = cbor.decode(decodedByteArray)
 
     const resultObject = {}
@@ -37,6 +40,9 @@ export const decodeAndParseCborData = (base64url) => {
     return resultObject
       
 }
+
+/** Parse  the Credential Subject Block   */
+
 function parseCredentialSubject(decodedCborData){
 
   var credentialSubjectObject = {}
@@ -84,6 +90,7 @@ function parseCredentialSubject(decodedCborData){
 
 }
 
+/** Parse  the IssuerAuth Block   */
 function parseValidityInfo(decodedCborData){
   const validityJsonObjectResult = { }
 
